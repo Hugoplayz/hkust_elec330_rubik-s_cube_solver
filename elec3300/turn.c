@@ -1,7 +1,7 @@
 #include "include/turn.h"
 
 void left_clockwise()
-{//dfdf
+{//dfdf yo man
 
 };
 void left_counterclockwise()
