@@ -1,5 +1,6 @@
 #include "include/turn.h"
 
+// For computer solving
 void left_clockwise()
 {//dfdf yo man
 
