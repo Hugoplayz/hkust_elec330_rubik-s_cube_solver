@@ -14,3 +14,7 @@ void secondfloor(Cube* c)
 {
 
 };
+void thirdfloor(Cube* c)
+{
+
+}
