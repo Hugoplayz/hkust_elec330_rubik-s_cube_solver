@@ -18,3 +18,9 @@ void thirdfloor(Cube* c)
 {
 
 }
+
+//***********Smart Fuction************
+void sf1(Cube* c)
+{
+
+}
