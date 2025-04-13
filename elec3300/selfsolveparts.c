@@ -3,7 +3,109 @@
 
 void whitebasecross(Cube* c)
 {
-    
+    int state = 0;
+int check = 0;
+
+while (state == 0) { // intend to make a flower
+    if (this->block[5][1] == 0 && this->block[5][3] == 0 && this->block[5][5] == 0 && this->block[5][7] == 0) {
+        state += 1;
+    }
+    else {
+        for (int i = 0; i < 4; i++) {             // the white face have white side
+            if (this->block[0][1] == 0) {
+                while (this->block[5][7] == 0) {
+                    // U
+                }
+                // F F 
+            }
+            // D
+        }
+        if (this->block[2][5] == 0) {             // side middle side have white
+            while (this->block[5][5] == 0) {
+                // U
+            }
+            // R
+        }
+        if (this->block[2][3] == 0) {
+            while (this->block[5][3] == 0) {
+                // U
+            }
+            // L'
+        }
+        if (this->block[1][5] == 0) {
+            while (this->block[5][7] == 0) {
+                // U
+            }
+            // F
+        }
+        if (this->block[1][3] == 0) {
+            while (this->block[5][1] == 0) {
+                // U
+            }
+            // B'
+        }
+        if (this->block[4][5] == 0) {
+            while (this->block[5][3] == 0) {
+                // U
+            }
+            // L
+        }
+        if (this->block[4][3] == 0) {
+            while (this->block[5][5] == 0) {
+                // U
+            }
+            // R'
+        }
+        if (this->block[3][5] == 0) {
+            while (this->block[5][1] == 0) {
+                // U
+            }
+            // B
+        }
+        if (this->block[3][3] == 0) {
+            while (this->block[5][7] == 0) {
+                // U
+            }
+            // F'
+        }
+        for (int i = 0; i < 4; i++) {
+            if (this->block[2][7] == 0) {           // side base side have white
+                while (this->block[5][5] == 0) {
+                    // U
+                }
+                // F' R F
+            }
+            // D
+        }
+        for (int i = 0; i < 4; i++) {
+            if (this->block[2][1] == 0) {           // side top side have white
+                // F' L D L' F F
+            }
+            // U
+        }
+    }
+}
+
+while (state == 1) { // intend to make white cross
+    if (this->block[0][1] == 0 && this->block[0][3] == 0 && this->block[0][5] == 0 && this->block[0][7] == 0) {
+        state += 1;
+    }
+    else {
+        if (this->block[1][1] == this->block[1][4]) {
+            // L L
+        }
+        if (this->block[2][1] == this->block[2][4]) {
+            // F F
+        }
+        if (this->block[3][1] == this->block[3][4]) {
+            // R R
+        }
+        if (this->block[4][1] == this->block[4][4]) {
+            // B B
+        }
+        // U
+    }
+}
     
 };
 void holewitebase(Cube* c)
