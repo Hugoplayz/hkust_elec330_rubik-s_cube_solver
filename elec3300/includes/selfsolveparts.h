@@ -11,5 +11,6 @@ void secondfloor(Cube* c);
 void thirdfloor(Cube* c);
 
 void sf1(Cube* c);
+void sf2(Cube* c);
 
 #endif
