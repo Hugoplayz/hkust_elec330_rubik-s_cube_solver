@@ -70,6 +70,66 @@ void solvedCubeInit(Cube* c)
     
 };
 
+void randomCubeInit(Cube* c)
+{
+    for (int i = 0; i < 20; i++)
+    {
+        switch (rand()%12)
+        {
+        case 0:
+            left_clockwise(c);
+            break;
+        
+        case 1:
+            left_counterclockwise(c);
+            break;   
+
+        case 2:
+            right_clockwise(c);
+            break;   
+
+        case 3:
+            right_counterclockwise(c);
+            break; 
+
+        case 4:
+            front_clockwise(c);
+            break; 
+
+        case 5:
+            front_counterclockwise(c);
+            break; 
+        
+        case 6:
+            back_clockwise(c);
+            break;
+
+        case 7:
+            back_counterclockwise(c);
+            break;
+
+        case 8:
+            up_clockwise(c);
+            break;
+
+        case 9:
+            up_counterclockwise(c);
+            break;
+
+        case 10:
+            down_clockwise(c);
+            break;
+
+        case 11:
+            back_counterclockwise(c);
+            break;
+        default:
+            break;
+        }
+    }
+    
+};
+
 void midpair(Cube* c, int face, int block)
 {
 
