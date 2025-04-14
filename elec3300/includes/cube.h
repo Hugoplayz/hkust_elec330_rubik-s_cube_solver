@@ -21,6 +21,8 @@ int solvecomplete(Cube* c);
 
 void midpair(Cube* c, int face, int block);
 
+void randomCubeInit(Cube* c);
+
 //         555
 //         555
 //         555
