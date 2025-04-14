@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "includes/cube.h"
 #include"includes/turn.h"
-
+#include "includes/selfsolveparts.h"
 
 
 int main()
