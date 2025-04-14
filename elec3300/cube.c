@@ -121,7 +121,7 @@ void randomCubeInit(Cube* c)
             break;
 
         case 11:
-            back_counterclockwise(c);
+            down_counterclockwise(c);
             break;
         default:
             break;
