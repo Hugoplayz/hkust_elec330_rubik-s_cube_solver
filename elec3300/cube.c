@@ -133,8 +133,3 @@ void randomCubeInit(Cube* c)
     
 };
 
-void midpair(Cube* c, int face, int block)
-{
-
-    
-};
