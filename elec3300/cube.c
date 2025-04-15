@@ -1,5 +1,7 @@
 #include "includes/cube.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 void displayCube(Cube* c)
 {
@@ -72,6 +74,7 @@ void solvedCubeInit(Cube* c)
 
 void randomCubeInit(Cube* c)
 {
+    srand (time(0));
     for (int i = 0; i < 20; i++)
     {
         switch (rand()%12)
