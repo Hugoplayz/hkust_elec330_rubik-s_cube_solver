@@ -12,5 +12,8 @@ void thirdfloor(Cube* c);
 
 void sf1(Cube* c);
 void sf2(Cube* c);
+void sf3(Cube* c);
+void sf4(Cube* c);
+int secpair(Cube* c,int face);
 
 #endif
