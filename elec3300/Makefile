@@ -4,6 +4,9 @@ CFLAGS = -std=c99 -O3
 BINDIR = bin
 BIN = kociemba
 
-solve: solve.c $(CKOCIEMBA_SRC)
+solve: test.c $(CKOCIEMBA_SRC)
 	mkdir -p $(BINDIR)
 	gcc $(CFLAGS) $(CKOCIEMBA_SRC) -I$(CKOCIEMBA_INCLUDE) test.c -o $(BINDIR)/$(BIN)
+
+run: 
+	./bin/kociemba.exe
