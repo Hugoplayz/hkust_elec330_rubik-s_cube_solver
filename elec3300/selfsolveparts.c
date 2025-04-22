@@ -1,7 +1,5 @@
 #include "includes/selfsolveparts.h"
 #include <stdio.h>
-#include <time.h>
-unsigned int retTime = 0;
 
 void whitebasecross(Cube* c)
 {
@@ -613,18 +611,7 @@ void thirdfloor(Cube* c)
     for (int i = 0; i < 4; i++)
     {
         if (c->block[4][0] == c->block[4][1])
-        {
-            if (c->block[2][1] == c->block[2][0] and 
-                c->block[1][1] == c->block[2][0] and 
-                c->block[3][1] == c->block[4][0])
-            {
-                while(c->block[1][1] != 1)
-                {
-                    up_clockwise(c);
-                }
-                return;
-            }
-            
+        {   
             break;
         }
         up_clockwise(c);
@@ -650,7 +637,7 @@ void thirdfloor(Cube* c)
         front_clockwise(c);
 
     }
-    else
+    else if (c->block[2][1] == c->block[1][0])
     {
         front_clockwise(c);
         front_clockwise(c);
@@ -743,6 +730,7 @@ void sf6(Cube* c)// for  3floor filll all yeloow C1
 
 void sf7(Cube* c)// for  3floor filll all yeloow C2
 {
+    
     right_clockwise(c);
     up_clockwise(c);
     right_counterclockwise(c);
@@ -755,7 +743,7 @@ void sf7(Cube* c)// for  3floor filll all yeloow C2
 }
 
 void sf8(Cube* c)// for 3floor D1
-{
+{   
     front_clockwise(c);
     right_counterclockwise(c);
     front_clockwise(c);
