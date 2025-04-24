@@ -266,12 +266,12 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 	      // 1000 anti-clockwise, 750 stable, 500 clockwise
-	      __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 1000);
-	      __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_4, 1000);
-	      __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, 1000);
-	      __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, 1000);
-	      __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, 1000);
-	      __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, 1000);
+	      __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 1000); // face 1
+	      __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_4, 1000); // face 2
+	      __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, 1000); // face 3
+	      __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, 1000); // face 4
+	      __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, 1000); // face 5
+	      __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, 1000); // face 6
 
 
 
