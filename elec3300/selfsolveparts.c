@@ -5,7 +5,6 @@ void whitebasecross(Cube* c)
 {
     while (1)
     {
-        puts("1");
         if (c->block[5][1] == 0 and 
             c->block[5][3] == 0 and
             c->block[5][5] == 0 and
@@ -204,7 +203,6 @@ void whitebasecross(Cube* c)
             back_clockwise(c);
             back_clockwise(c);
         }
-        puts("2");
         up_clockwise(c);
         
     }
