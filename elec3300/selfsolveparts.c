@@ -3,124 +3,212 @@
 
 void whitebasecross(Cube* c)
 {
-int state = 0;
-int check = 0;
+    while (1)
+    {
+        puts("1");
+        if (c->block[5][1] == 0 and 
+            c->block[5][3] == 0 and
+            c->block[5][5] == 0 and
+            c->block[5][7] == 0)
+        {
+            break;
+        }
+        
+        if (c->block[0][1] == 0)
+        {
+            while (c->block[5][7] == 0)
+            {
+                up_clockwise(c);
+            }            
+            front_clockwise(c);
+            front_clockwise(c);
+        }
+        if (c->block[0][3] == 0)
+        {
+            while (c->block[5][3] == 0)
+            {
+                up_clockwise(c);
+            }            
+            left_clockwise(c);
+            left_clockwise(c);
+        }
+        if (c->block[0][5] == 0)
+        {
+            while (c->block[5][5] == 0)
+            {
+                up_clockwise(c);
+            }            
+            right_clockwise(c);
+            right_clockwise(c);
+        }
+        if (c->block[0][7] == 0)
+        {
+            while (c->block[5][1] == 0)
+            {
+                up_clockwise(c);
+            }            
+            back_clockwise(c);
+            back_clockwise(c);
+        }
 
-while (state == 0) { // intend to make a flower
-    if (c->block[0][1] == 0 && c->block[0][3] == 0 && c->block[0][5] == 0 && c->block[0][7] == 0) {
-        state += 2;
-    }
-    if (c->block[5][1] == 0 && c->block[5][3] == 0 && c->block[5][5] == 0 && c->block[5][7] == 0) {
-        state += 1;
-    }
-    else {
-        for (int i = 0; i < 4; i++) { // the white face has white side
-            if (c->block[0][1] == 0) {
-                while (c->block[5][7] == 0) {
-                    up_clockwise(c); // U
-                }
-                front_clockwise(c); // F
-                front_clockwise(c); // F
-            }
-            down_clockwise(c); // D
+        if (c->block[1][7] == 0)
+        {
+            while (c->block[5][7] == 0)
+            {
+                up_clockwise(c);
+            }            
+            left_counterclockwise(c);
+            front_clockwise(c);
         }
-        if (c->block[2][5] == 0) { // side middle side has white
-            while (c->block[5][5] == 0) {
-                up_clockwise(c); // U
-            }
-            right_clockwise(c); // R
+        if (c->block[2][7] == 0)
+        {
+            while (c->block[5][5] == 0)
+            {
+                up_clockwise(c);
+            }            
+            front_counterclockwise(c);
+            right_clockwise(c);
         }
-        if (c->block[2][3] == 0) {
-            while (c->block[5][3] == 0) {
-                up_clockwise(c); // U
-            }
-            left_counterclockwise(c); // L'
+        if (c->block[3][7] == 0)
+        {
+            while (c->block[5][1] == 0)
+            {
+                up_clockwise(c);
+            }            
+            right_counterclockwise(c);
+            back_clockwise(c);
         }
-        if (c->block[1][5] == 0) {
-            while (c->block[5][7] == 0) {
-                up_clockwise(c); // U
-            }
-            front_clockwise(c); // F
+        if (c->block[4][7] == 0)
+        {
+            while (c->block[5][3] == 0)
+            {
+                up_clockwise(c);
+            }            
+            back_counterclockwise(c);
+            left_clockwise(c);
         }
-        if (c->block[1][3] == 0) {
-            while (c->block[5][1] == 0) {
-                up_clockwise(c); // U
-            }
-            back_counterclockwise(c); // B'
-        }
-        if (c->block[4][5] == 0) {
-            while (c->block[5][3] == 0) {
-                up_clockwise(c); // U
-            }
-            left_clockwise(c); // L
-        }
-        if (c->block[4][3] == 0) {
-            while (c->block[5][5] == 0) {
-                up_clockwise(c); // U
-            }
-            right_counterclockwise(c); // R'
-        }
-        if (c->block[3][5] == 0) {
-            while (c->block[5][1] == 0) {
-                up_clockwise(c); // U
-            }
-            back_clockwise(c); // B
-        }
-        if (c->block[3][3] == 0) {
-            while (c->block[5][7] == 0) {
-                up_clockwise(c); // U
-            }
-            front_counterclockwise(c); // F'
-        }
-        for (int i = 0; i < 4; i++) {
-            if (c->block[2][7] == 0) { // side base side has white
-                while (c->block[5][5] == 0) {
-                    up_clockwise(c); // U
-                }
-                front_counterclockwise(c); // F'
-                right_clockwise(c);        // R
-                front_clockwise(c);        // F
-            }
-            down_clockwise(c); // D
-        }
-        for (int i = 0; i < 4; i++) {
-            if (c->block[2][1] == 0) { // side top side has white
-                front_counterclockwise(c); // F'
-                left_clockwise(c);         // L
-                down_clockwise(c);         // D
-                left_counterclockwise(c);  // L'
-                front_clockwise(c);        // F
-                front_clockwise(c);        // F
-            }
-            up_clockwise(c); // U
-        }
-    }
-}
 
-while (state == 1) { // intend to make white cross
-    if (c->block[0][1] == 0 && c->block[0][3] == 0 && c->block[0][5] == 0 && c->block[0][7] == 0) {
-        state += 1;
+        if (c->block[1][5] == 0)
+        {
+            while (c->block[5][7] == 0)
+            {
+                up_clockwise(c);
+            }            
+            front_clockwise(c);
+        }
+        if (c->block[2][5] == 0)
+        {
+            while (c->block[5][5] == 0)
+            {
+                up_clockwise(c);
+            }            
+            right_clockwise(c);
+        }
+        if (c->block[3][5] == 0)
+        {
+            while (c->block[5][1] == 0)
+            {
+                up_clockwise(c);
+            }            
+            back_clockwise(c);
+        }
+        if (c->block[4][5] == 0)
+        {
+            while (c->block[5][3] == 0)
+            {
+                up_clockwise(c);
+            }            
+            left_clockwise(c);
+        }
+
+        if (c->block[1][3] == 0)
+        {
+            while (c->block[5][1] == 0)
+            {
+                up_clockwise(c);
+            }            
+            back_counterclockwise(c);
+        }
+        if (c->block[2][3] == 0)
+        {
+            while (c->block[5][3] == 0)
+            {
+                up_clockwise(c);
+            }            
+            left_counterclockwise(c);
+        }
+        if (c->block[3][3] == 0)
+        {
+            while (c->block[5][7] == 0)
+            {
+                up_clockwise(c);
+            }            
+            front_counterclockwise(c);
+        }
+        if (c->block[4][3] == 0)
+        {
+            while (c->block[5][5] == 0)
+            {
+                up_clockwise(c);
+            }            
+            right_counterclockwise(c);
+        }
+
+        if (c->block[1][1] == 0)
+        {           
+            left_clockwise(c);
+            up_counterclockwise(c);
+            front_clockwise(c);
+        }
+        if (c->block[2][1] == 0)
+        {          
+            front_clockwise(c);
+            up_counterclockwise(c);
+            right_clockwise(c);
+        }
+        if (c->block[3][1] == 0)
+        {         
+            right_clockwise(c);
+            up_counterclockwise(c);
+            back_clockwise(c);
+        }
+        if (c->block[4][1] == 0)
+        {           
+            back_clockwise(c);
+            up_counterclockwise(c);
+            left_clockwise(c);
+        }
     }
-    else {
-        if (c->block[1][1] == c->block[1][4]) {
-            left_clockwise(c);            // L
-            left_clockwise(c);            // L
+    while  (c->block[5][1] == 0 or 
+            c->block[5][3] == 0 or
+            c->block[5][5] == 0 or
+            c->block[5][7] == 0)
+    {
+        if (c->block[1][1] == 1 and c->block[5][3] == 0)
+        {
+            left_clockwise(c);
+            left_clockwise(c);
         }
-        if (c->block[2][1] == c->block[2][4]) {
-            front_clockwise(c);           // F
-            front_clockwise(c);           // F
+        if (c->block[2][1] == 2 and c->block[5][7] == 0)
+        {
+            front_clockwise(c);
+            front_clockwise(c);
         }
-        if (c->block[3][1] == c->block[3][4]) {
-            right_clockwise(c);           // R
-            right_clockwise(c);           // R
+        if (c->block[3][1] == 3 and c->block[5][5] == 0)
+        {
+            right_clockwise(c);
+            right_clockwise(c);
         }
-        if (c->block[4][1] == c->block[4][4]) {
-            back_clockwise(c);            // B
-            back_clockwise(c);            // B
+        if (c->block[4][1] == 4 and c->block[5][1] == 0)
+        {
+            back_clockwise(c);
+            back_clockwise(c);
         }
-        up_clockwise(c); // U
+        puts("2");
+        up_clockwise(c);
+        
     }
-}
+    
     
 };
 void holewitebase(Cube* c)
